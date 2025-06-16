@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($responseArray['data']['accepted'][0]['track_info']['tracking']['providers'][0]['events'])) {
         $trackinfo = $responseArray['data']['accepted'][0]['track_info']['tracking']['providers'][0]['events'];
     } else {
-        $errorMessage = 'ainda sem info.';
+        $errorMessage = 'Tracking number adicionado com sucesso.';
     }
 }
 
@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h3>Minga London - Tracking order</h3>
         <form method="POST" style="width:100%; text-align:center" class="form-tracking--test">
             <input type="text" name="tracking_number" id="tracking_number" placeholder="Tracking" required>
-            <button type="submit" class="tracking-button">track</button>
+            <button type="submit" class="tracking-button">track my order</button>
         </form>
     
         <?php if ($errorMessage): ?>
